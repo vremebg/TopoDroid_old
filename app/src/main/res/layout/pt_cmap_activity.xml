@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+ <TableLayout 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/paddingh"
+    android:paddingRight="@dimen/paddingh"
+    android:paddingBottom="@dimen/paddingv"
+    >
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:text="@string/LINE"
+      />
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:text="@string/POINT"
+      />
+  </TableRow>
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn0"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <EditText android:id="@+id/etline0"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+    <EditText android:id="@+id/etpoint0"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+  </TableRow>
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn1"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <EditText android:id="@+id/etline1"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+    <EditText android:id="@+id/etpoint1"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+  </TableRow>
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn2"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <EditText android:id="@+id/etline2"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+    <EditText android:id="@+id/etpoint2"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+  </TableRow>
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn3"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <EditText android:id="@+id/etline3"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+    <EditText android:id="@+id/etpoint3"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+  </TableRow>
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn4"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <EditText android:id="@+id/etline4"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+    <EditText android:id="@+id/etpoint4"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+  </TableRow>
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn5"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <EditText android:id="@+id/etline5"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+    <EditText android:id="@+id/etpoint5"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+  </TableRow>
+
+  <TableRow
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    >
+    <Button android:id="@+id/btn6"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_weight="10"
+      />
+    <EditText android:id="@+id/etline6"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+    <EditText android:id="@+id/etpoint6"
+      style="@style/edit_text"
+      android:layout_width="wrap_content"
+      android:layout_weight="45"
+      android:inputType="text"
+      />
+  </TableRow>
+
+ </TableLayout>
+
+   					  
+    <LinearLayout 
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" 
+      android:layout_marginTop="@dimen/marginvbig"
+      android:gravity="right"
+    >
+    <Button android:id="@+id/button_ok"
+      style="@style/button_default"
+      android:layout_marginRight="@dimen/marginh"
+      android:text="@string/button_save"
+    />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+  style="@style/base_padding"
+  android:layout_width="match_parent" 
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  >
+   					  
+    <LinearLayout 
+       android:id="@+id/layout1"
+       android:layout_marginTop="@dimen/margintiny"
+       android:layout_width="fill_parent" 
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       >
+
+    <TextView android:id="@+id/view_plot_name" 
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" 
+      	android:ems="25"
+        android:text="@string/name"
+        />
+
+    <EditText android:id="@+id/edit_plot_name" 
+      style="@style/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+      	android:ems="25"
+        android:hint="@string/name"
+        android:singleLine="true"
+        android:scrollHorizontally="true" />
+
+    </LinearLayout>
+
+    <LinearLayout 
+       android:id="@+id/layout2"
+       android:layout_below="@id/layout1"
+       android:layout_marginTop="@dimen/marginv"
+       android:layout_width="fill_parent" 
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       >
+
+    <TextView android:id="@+id/view_plot_station" 
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" 
+      	android:ems="25"
+        android:text="@string/station"
+        />
+
+      <EditText android:id="@+id/edit_plot_start"
+         style="@style/edit_text"
+         android:layout_width="fill_parent"
+         android:hint="@string/plot_start"
+         android:scrollHorizontally="true" />
+   		
+      <!-- EditText android:id="@+id/edit_plot_view"
+         style="@style/edit_text"
+         android:layout_width="150dp"
+         android:hint="@string/plot_view"
+         android:scrollHorizontally="true" / -->
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout4"
+      android:layout_below="@id/layout2"
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" 
+      android:layout_marginTop="@dimen/marginvbig"
+      android:gravity="right"
+      >
+      <!-- EditText android:id="@+id/plot_project"
+        style="@style/edit_text"
+        android:layout_width="0dp"
+        android:layout_weight="50"
+        android:hint="0"
+        android:scrollHorizontally="true" / -->
+
+      <CheckBox android:id="@+id/button_extended"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" 
+        android:layout_weight="50"
+        android:text="@string/extended_profile"
+      />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout5"
+      android:layout_below="@id/layout4"
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content"
+      android:layout_gravity="right"
+      android:orientation="horizontal" 
+      android:layout_marginTop="@dimen/marginvbig"
+      android:gravity="right"
+      >
+      <Button android:id="@+id/button_ok"
+        style="@style/button_default"
+        android:layout_marginRight="@dimen/marginh"
+        android:text="@string/button_ok"
+      />
+      <Button android:id="@+id/button_back"
+        style="@style/button_default"
+        android:text="@string/button_cancel"
+      />
+    </LinearLayout>
+
+  <android.inputmethodservice.KeyboardView android:id="@+id/keyboardview"
+    style="@style/keyboard"
+  />
+
+</RelativeLayout>

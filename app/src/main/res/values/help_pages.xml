@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="PhotoActivity">page_photo_list.htm</string>
+  <string name="PtCmapActivity">page_pt_cmap.htm</string>
+  <string name="SensorActivity">page_sensors.htm</string>
+  <string name="SensorListActivity">page_sensors_list.htm</string>
+  <string name="SketchWindow">page_todo.htm</string>
+
+  <string name="FixedActivity">page_fixed_list.htm</string>
+
+  <string name="MainWindow">manual02.htm</string>
+  <string name="DeviceActivity">manual03.htm</string>
+  <string name="CalibActivity">manual04.htm</string>
+  <string name="GMActivity">manual05.htm</string>
+  <string name="SurveyWindow">manual08.htm</string>
+  <string name="ShotWindow">manual07.htm</string>
+  <string name="DrawingWindow">manual09.htm</string>
+  <string name="OverviewWindow">manual12.htm</string>
+  <string name="CWDActivity">page_cwd.htm</string>
+  <string name="CBDdialog">page_cwd.htm</string>
+
+  <string name="AzimuthDialDialog">page_azimuth.htm</string>
+  <string name="AudioDialog">page_audio.htm</string>
+  <string name="CalibCheckDialog">page_calib_check.htm</string>
+  <string name="CalibCoeffDialog">page_calib_coeffs.htm</string>
+  <string name="CalibCoverageDialog">page_calib_distrib.htm</string>
+  <string name="CalibGMDialog">page_gm.htm</string>
+  <string name="CalibImportDialog">page_calib_import.htm</string>
+  <string name="CalibListDialog">page_calib_dialog.htm</string>
+  <string name="CalibValidateListDialog">page_validation.htm</string>
+  <string name="CalibValidateResultDialog">page_validation.htm</string>
+  <string name="ConnectDialog">page_connect.htm</string>
+  <string name="CurrentStationDialog">page_saved_station.htm</string>
+  <string name="StationSearchDialog">page_station_search.htm</string>
+  <string name="DeviceA3InfoDialog">page_a3_info.htm</string>
+  <string name="DeviceA3MemoryDialog">page_memory.htm</string>
+  <string name="DeviceNameDialog">page_device_name.htm</string>
+  <string name="DeviceSelectDialog">page_device_select.htm</string>
+  <string name="DeviceX310InfoDialog">page_x310_info.htm</string>
+  <string name="DeviceX310MemoryDialog">page_memory.htm</string>
+  <string name="DistoXStatDialog">page_stat2.htm</string>
+  <string name="DistoXAnnotations">page_survey_notes.htm</string>
+  <string name="DrawingAreaDialog">page_area_dialog.htm</string>
+  <string name="DrawingLabelDialog">page_label_dialog.htm</string>
+  <string name="DrawingPhotoDialog">page_photo_dialog.htm</string>
+  <string name="DrawingPhotoEditDialog">page_photo_edit_dialog.htm</string>
+  <string name="DrawingLineDialog">page_line_dialog.htm</string>
+  <string name="DrawingLineSectionDialog">manual11.htm</string>
+  <string name="DrawingModeDialog">page_drawing_refs.htm</string>
+  <string name="DrawingPointDialog">page_drawing_point.htm</string>
+  <string name="DrawingProfileFlipDialog">page_shift.htm</string>
+  <string name="DrawingShotDialog">page_drawing_shot.htm</string>
+  <string name="DrawingStationDialog">page_sketch_station.htm</string>
+  <string name="OverviewModeDialog">page_overview_refs.htm</string>
+  <string name="ExportDialog">manual13.htm</string>
+  <string name="FirmwareDialog">page_firmware.htm</string>
+  <string name="FirmwareFileDialog">page_firmware.htm</string>
+  <string name="FixedDialog">page_fixed.htm</string>
+  <string name="FixedAddDialog">page_fixed_add.htm</string>
+  <string name="FixedGpsDialog">page_fixed_gps.htm</string>
+  <string name="FixedImportDialog">page_fixed_import.htm</string>
+  <string name="GMGroupsDialog">page_groups.htm</string>
+  <string name="HelpDialog">page_help.htm</string>
+  <string name="ImportDialog">page_import.htm</string>
+  <string name="ItemPickerDialog">page_tools_list.htm</string>
+  <string name="ItemRecentDialog">page_tools_recent.htm</string>
+  <string name="PhotoCommentDialog">page_photo_comment.htm</string>
+  <string name="PhotoEditDialog">page_photo_edit.htm</string>
+  <string name="PhotoSensorsDialog">page_shot_edit2.htm</string>
+  <string name="PlotListDialog">page_plot_list.htm</string>
+  <string name="PlotMergeDialog">page_plot_merge.htm</string>
+  <string name="PlotNewDialog">page_new_plot.htm</string>
+  <string name="PlotRecoverDialog">page_backup.htm</string>
+  <string name="PlotRenameDialog">page_plot_rename.htm</string>
+  <string name="PlotZoomFitDialog">page_plot_zoomfit.htm</string>
+  <string name="ProjectionDialog">page_projection.htm</string>
+  <string name="ScrapOutlineDialog">page_scrap_outline.htm</string>
+  <string name="SensorEditDialog">page_sensors_edit.htm</string>
+  <string name="ShotDeleteDialog">page_shot_edit2.htm</string>
+  <string name="ShotDialog">page_shot_edit1.htm</string>
+  <string name="ShotDisplayDialog">page_displaymode.htm</string>
+  <string name="ShotNewDialog">page_man_data.htm</string>
+  <string name="Sketch3dNewDialog">page_todo.htm</string>
+  <string name="SketchModeDialog">page_todo.htm</string>
+  <string name="SketchNewShotDialog">page_todo.htm</string>
+  <string name="SurveyCalibrationDialog">page_survey_calib.htm</string>
+  <string name="SurveyNewDialog">page_new_survey.htm</string>
+  <string name="SurveyRenameDialog">page_survey_rename.htm</string>
+  <string name="SurveyStatDialog">page_stat1.htm</string>
+  <string name="SymbolEnableDialog">page_tools.htm</string>
+  <string name="SymbolReload">page_symbol_reload.htm</string>
+  <!-- string name="TopoDroidAlertDialog"></string -->
+  <string name="TopoDroidPerms">page_perms.htm</string>
+  <string name="UndeleteDialog">page_undelete.htm</string>
+
+</resources>
