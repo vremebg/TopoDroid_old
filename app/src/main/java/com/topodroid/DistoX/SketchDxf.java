@@ -20,6 +20,8 @@ import java.util.ArrayList;
 // import java.util.HashMap;
 
 import android.util.SparseArray;
+import org.kabeja.DraftDocument;
+import org.kabeja.dxf.generator.DXFGenerator;
 
 class SketchDxf
 {
@@ -28,6 +30,8 @@ class SketchDxf
 
   static void write( PrintWriter out, String fullname, SketchModel model )
   {
+    DraftDocument doc= new DraftDocument();
+    DXFGenerator generator = new DXFGenerator();
     DistoXNum num = model.mNum;
     // header
     out.printf("999\nDXF created from TopoDroid\n");
