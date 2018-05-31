@@ -1,0 +1,49 @@
+<html><body>
+<h3>[7] SHOT LIST</h3>
+
+The shots are shown in a list. The list has no header to save space.  The shot informations are
+<ul style="margin-top=0">
+<li>Index (optional: it is shown only if the related choice in the <u>Display mode</u> dialog is checked)</li>
+<li>From station</li>
+<li>To station</li>
+<li>Distance</li>
+<li>Azimuth</li>
+<li>Inclination</li>
+<li>Extend direction: either left (&lt;), right (&gt;), vertical (|), or ignore (a blank space). The "extend" of splays is present only if explicitly set by the user in one of the shot edit dialogs.</li>
+</ul>
+Additional characters denote the presence of a comment (N), a photo (#), and a flag: either duplicate shot (*) or a surface shot (-).<br><p>
+
+Blank shots, and repeated-legs can be hidden. Splay shots can also be hidden to unclutter the list of shots. However, even if splays are not shown, you can see those at a station by tapping on the station name in a leg shot. To hide them tap again on the station name (even a tap on the name in a splay will do).<br><p>
+
+TopoDroid can set the station names automatically according to the <a href="page_station_policy.htm">station assignment policy</a>.<br><p>
+
+<b>Shot item tappings</b>
+<ul style="margin-top=0">
+<li>a tap on a station name toggles the display of splays at that station (only if splays are globally hidden)</li>
+<li>a tap on the shot data opens the <a href="page_shot_edit1.htm">shot edit</a> dialog, in which you can set the stations as well as other attributes of the shot.</li>
+<li>a long tap on a station name makes it the <a href="page_current.htm">active</a> station (it is highlighted green)</li>
+<li>a long tap on a shot starts the multi-shot selection</li>
+</ul>
+<br><p>
+
+If you use TopoDroid automatic <a href="page_station_policy.htm">station naming</a>, you are likely to need the shot dialog only to enter the comment, and to change the "extend" direction. These two actions can be done also from the drawing window, by selecting the shot in "edit" mode [A] and picking the <u>Note</u> button: this is described in the section on the <u>Sketch</u> window).<br><p>
+
+<b>Multi-shot selection</b><br>
+The selected shots have a gray background (possibly
+only in the back of the stations). Tapping a shot adds/removes it from the selection.
+The button bar changes to buttons for the multi-shot actions:
+<ul>
+<li>set the shot extend to "left"</li>
+<li>reverse the shot extends</li>
+<li>set the shot extend to "right"</li>
+<li>open the last sketch with the selected shots highlighted</li>
+<li>compute the strike and dip of the plane containing the shots. Only shots with the same FROM station as the first are considered. The result is written into the comment of the first shot</li>
+<li>delete the selected shots. Warning: hidden secondary-leg shots are deleted when the corresponding leg shot is deleted</li>
+<li>close the multi-shot selection</li>
+</ul>
+<br><p>
+
+<a href="manual06.htm">&lt; Survey data</a> |
+<a href="manual08.htm">Survey info &gt;</a>
+
+</body></html>

@@ -1,0 +1,68 @@
+<html><body>
+<h3>[5] CALIBRATION DATA</h3>
+
+The calibration data window displays the list of calibration data. If the calibration has no data, the window is empty but for the top buttons. Each calibration data line contains the following data informations:
+<ul style="margin-top=0">
+<li>index: incremental index that identifies the data</li>
+<li>group: number of the group the data belongs to</li>
+<li>azimuth, inclination, and roll, computed from the raw values without any
+calibration correction</li>
+<li>error: the difference between the calibration-corrected direction and the
+group average direction, in degrees</li>
+</ul><br><p>
+
+The calibration data are displayed with red and blue text-color, alternating between even and odd group numbers. Data with no group are grey.<br><p>
+
+<h4>ACTIONS</h4>
+<ul style="margin-top=0">
+<li>tap on a data: calibration data edit dialog</li>
+</ul><br><p>
+
+<h4>BUTTONS</h4>
+<ul style="margin-top=0">
+<li><u>Toggle</u> the DistoX calibration mode on and off</li>
+<li><u>Bluetooth</u>: reset BT, or control DistoX remotely</li>
+<li><u>Download</u> calibration data from the DistoX</li>
+<li><u>Groups</u> divides the calibration data into <a href="page_groups.htm">groups</a> automatically</li>
+<li><a href="page_calib_coeffs.htm">calibration coefficients</a> computation</li>
+<li><a href="page_calib_distrib.htm">angular distribution</a> of the calibration data</li>
+<li><u>Read</u> and display the coefficients stored in the DistoX</li>
+<li><u>Write</u> writes the calibration coefficients to the DistoX. Enabled only after the calibration coefficients have been computed. The coefficients can also be written directly from the dialog showing the outcome of the computation.</li>
+</ul><br><p>
+
+At the moment only on-demand data download is active for the calibration data. The downloaded data are added to the current calibration. Therefore you can take some calibration measurements, download the data, check if you are satisfied with them, if not take further data and download them, and so on until you are happy with your calibration data. Downloaded data can be "disabled" (by setting the group number to "0" (zero); 
+disabled data are not used in the computation of calibration coefficients), or deleted (usually not shown in the list of data).
+Deleted data are not taken into account in the group assignment policy.<br><p>
+
+<h4>Bluetooth</h4>
+This button resets the TopoDroid bluetooth connection.<br>
+It also lets the user control the DistoX remotely [A]: turn on or off the laser, and take a calibration shot.
+The data is immediately downloaded if the related setting is selected.<br><p>
+
+The bluetooth button is disabled while TopoDroid is taking a calibration shot.<br><p>
+
+<h4>Calibration computation</h4>
+The "gear" button starts the computation of the calibration coefficients.<br>
+When the computation ends, the coefficient dialog is shown.<br>
+If there are not enough data or data groups the computation is not carried out and a warning message is displayed.<br>
+The calibration fails if the limit of the iteration is reached before the computation ends. In this case a message is
+displayed.<br><p>
+
+<h4>Warnings</h4>
+<ul style=margin-top=0">
+<li><b>saturated data</b>: data with abnormal magnetic field value. A possible cause of this is the presence of spurious magnetic fields. Saturated data have a red background<li>
+<li><b>zero data</b>: incorrectly received calibration data. The data has zero values, and by default it is not assigned a number, although it is used in computing the groups. Zero data have a pink background</li>
+</ul><br><p>
+
+<h4>MENUS</h4>
+<ul style="margin-top=0">
+<li><u>Display</u>: whether to display all data including the deleted data</li>
+<li><u>Validate</u>: <a href="page_validation.htm">validation</a> of this calibration with another one</li>
+<li><u>Settings</u>: same as for the calibration window</li>
+<li><u>Help</u></li>
+</ul><br><p>
+
+<a href="manual04.htm">&lt; Calibration window</a> |
+<a href="manual06.htm">Survey data &gt;</a>
+
+</body></html>

@@ -1,0 +1,200 @@
+<html><body>
+<h3>[9] SKETCH WINDOW</h3>
+
+The Sketch button of the "Shot data" window opens the dialog with the list of sketches, besides the "New Sketch" button. Tap on this button to create a new survey sketch.<br><p>
+
+Each sketch is made of two sketch files: one for the plan view, the other for the profile view (either extended or projected). X-sections have only one file. A new sketch is opened in the plan view. Afterwards the sketch dialog shows two columns, one for the plan, the other for the profile view, and you can choose which one to open from.<br><p>
+
+The extended profile view displays the midline with the shots drawn left or right, or vertical, according to their "extend". Splays are projected on the vertical plane of the shot that is closest in azimuth, unless the user has set a given "extend" through the shot edit dialog.
+For example, for the plan view in figure, the splays in the light region are projected on the vertical plane of shot 1-2, those in the dark region on the vertical plane of 0-1.<br><p>  
+
+The projected profile view displays the midline and the splays projected in the vertical plane perpendicular to the projection azimuth.<br><p>
+
+
+<img src="splay_extend.png"><br><p>
+
+<b>Splays</b><br>
+Splays are displayed with continuous or dashed/dotted line and with different colors.<br>
+The splay display is turned off if the shot is marked for no-display in plan or profile view.<br>
+A "commented" splay is dark gray. X-splays are green.
+Otherwise the splay is gray.<br><p>
+
+In <u>plan</u> view if the inclination of the splay is over the plan-view threshold, the splay is not drawn.
+If the splay clino is above the dash clino-threshold, it is dotted (positive clino) or dashed (negative clino).<br><p>
+
+In <u>profile</u> view the splay is dashed/dotted if the angle with the "closest" leg in azimuth is above the dash azimuth-threshold.
+However is the splay dash-coherence is checked the splays are dash/dotted as in plan view.<br><p>
+
+For <u>x-sections</u> the x-splays are green, the others are blue (or light blue), and dashed (or dotted) if the splay
+angle with the section plane is over the dash angle-threshold.<br><p>
+
+
+
+The sketch window has four modes:
+<ul style="margin-top=0">
+<li><b>move</b>, the default: you can shift the canvas, and zoom in/out. If the "fixed references" box in the references dialog is set, shifts affect only the drawings [level experimental]</li>
+<li><b>draw</b>: in this mode you add iconic symbols (points, including labels), and trace lines and areas (closed regions filled with a color).</li>
+<li><b>erase</b>: to erase items, and lines/areas, or portions of them, from the sketch.</li>
+<li><b>edit</b> [A]: for pointwise changes and item properties editing, including item deleting.</li>
+</ul><br><p>
+
+Shift and zoom are possible even in <b>draw</b> and in <b>erase</b> mode using two fingers.
+Zoom controls can be enabled (either temporarily or permanently). If temporary, they show up when you tap at the bottom of the canvas in the middle.
+If "side-drag" is enabled, the sketch can be shifted by "dragging" it from the left, right and bottom sides of the canvas.<br><p>
+
+
+<h4>BUTTONS</h4>
+The modes are represented by the three green buttons on the left: <u>draw</u>, <u>erase</u>, and <u>edit</u>. When one of them is "on" the relative button has a bright green color. Otherwise the mode is "move".<br><p>
+
+When a green button is "on", a long tap on it, opens the dialog to edit the settings relevant to the mode of the button.<br><p>
+
+The remaining buttons differ by the mode. In the <b>move</b> mode they are
+<ul style="margin-top=0">
+<li>Data <u>Download</u>. The last download shots are bluish to help distinguish them from the others. If no DistoX is selected, this button is hidden.</li>
+<li><a href="page_bluetooth.htm">Bluetooth</a> reset/controls</li>
+<li><a href="page_survey_notes.htm">Notes</a></li>
+<li>Drawing <a href="page_drawing_refs.htm">references</a>: legs, splays, stations, metric grid, and scalebar.</li>
+<li><u>Plan/Profile</u> switch.</li>
+<li><a href="page_azimuth.htm">"extend" reference</a></li>
+</ul><br><p>
+
+The <b>draw</b> mode has four buttons besides the green ones:
+<ul style="margin-top=0">
+<li><u>Undo</u> removes the last items you have drawn, one at a time.</li>
+<li><u>Redo</u> puts the removed item back in the sketch, one at a time. The list of removed items is emptied when you draw something new. Pointwise editing actions may also affect the list of redo.</li>
+<li><a href="page_tools_recent.htm">Drawing tool</a> picker</li>
+<li>Line <u>continuation</u></li>
+</ul><br><p>
+
+The <b>erase</b> mode has three buttons besides the green ones:
+<ul style="margin-top=0">
+<li><u>Undo</u></li>
+<li><u>Redo</u></li>
+<li><u>Filter</u> to limit the eraser to one class among points, lines or areas</li>
+<li><u>Size</u> of the eraser [S, M, L]</li>
+</ul><br><p>
+
+The <b>edit</b> [A] mode has, besides the green buttons:
+<ul style="margin-top=0">
+<li><u>Filter</u> limits the selectable items [all, points, lines, areas, shots, stations]</li>
+<li><u>Size</u> of the selection tool [S, M, L]</li>
+<li><u>Point-wise</u> actions</li>
+<li><u>Item</u> properties edit</li>
+<li><u>Delete</u> the item from the sketch (it asks for confirmation, and can be "undone").</li>
+<li><u>Range</u> selection: either pointwise or local (only for lines and areas).</li>
+</ul><br><p>
+When there are selected items the first two buttons become <u>previous/next</u> navigation buttons in the set
+of the selected items.<br><p>
+
+The buttons are somewhat different for x-section sketches.
+In the <b>move</b> mode the buttons "download", "bluetooth", "switch", and azimuth", are not shown, but there
+is a button to select which splay to show. It cycles thru four states: "both", "viewed station", "behind station", "none".
+Accordingly, the drawing references dialog has no box for the splays.
+<br><p>
+
+
+
+<h4>MENUS</h4>
+<ul style="margin-top=0">
+<li><u>Export</u>: the sketch can be <a href="page_plot_export.htm">exported</a> as <i>Therion</i> 2D file(s), <i>cSurvey</i> (a single file), PNG (two files), DXF (two files), and SVG (two files).</li>
+<li><a href="page_stat2.htm">Statistics</a>. For x-sections this is just the section area.</li>
+<li><u>Reload</u> the sketch from a <a href="page_backup.htm">backup copy</a>.</li>
+<li><u>Zoom-fit</u>: dialog to fit the sketch into the screen, and to select the portrait or landscape orientation</li>
+<li><u>Switch</u> to another sketch.</li>
+<li><u>Rename/Delete/Split</u> the sketch. Deleted sketches can be recovered ("recover" menu in shot window)</li>
+<li><a href="page_tools.htm">drawing tools</a> palette</li>
+<li><u>Overview</u> window, showing all the survey sketches together. [Only for plan and extended profiles]</li>
+<li><u>Settings</u></li>
+<li><u>Help</u></li>
+</ul><br><p>
+
+
+<h4>SKETCH SETTINGS</h4>
+<ul style="margin-top=0">
+  <li><i>Drawing tool picker</i>: most-recent [default], or list, or grid, or triple-grid view</li>
+  <li><i>Number of recent tools</i> to display in the recent tool picker [3, <u>4</u>, 5, or 6]</li>
+  <li><i>Side drag</i>: enable panning by side-drag</li>
+  <li><i>Zoom controls</i>: specifies whether and how zoom controls are displayed on multitouch devices [B]. The zoom controls can be hidden, displayed only for a short interval when the user tap the lower part of the screen in the middle, or shown all the time</li>
+  <li><i>Midline check</i>: check if all the legs are attached to the midline</li>
+  <li><i>xtherion areas</i> save sketch th2 files with an extra point in area borders</li>
+  <li><i>POINT TOOLS</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li><i>Non-zoomed point</i>: point items stay of fixed size when zooming</li>
+    <li><i>Base scale</i> for point symbols</li>
+    <li>Label <i>text size</i> [24 pt]</li>
+    </ul>
+  <li><i>LINE TOOLS</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li>Line <i>tracing style</i>: fine, normal, coarse, or "splines" (interpolated-curve)</li>
+    <li>Line <i>thickness</i></li>
+    <li><i>Direction tick length</i> for x-section lines [5 px]</li>
+    <li>Line <i>point spacing</i>: distance between line points in normal style [5 px] </li>
+    <li><i>Bezier accuracy</i> determines the number of base points in the interpolating spline. The smaller the more points [1.0]</li>
+    <li><i>Bezier corner</i>. Even a spline should have corners, when there is a sharp turn at a point. Small values (0.2) make the corner sharper. Large values (20.0) make them rounded.</li>
+    </ul>
+  </li>
+  <li><i>SKETCH ITEMS</i>
+    <ul style="margin-top:0; margin-bottom:0">
+  <li><i>Splay plan-view threshold</i>: splay shots with inclination above this threshold are hidden in the plan-view [80 deg.]</li>
+  <li><i>Splay dash coherence</i>: splay shots dashed coherently between plan and profile views [yes]</li>
+  <li><i>Splay dash clino threshold</i>: splay shots with inclination above this threshold are dashed, in plan view [50 deg.]</li>
+  <li><i>Splay dash azimuth threshold</i>: splay shots with azimuth off more than this threshold are dashed, in profile view [60 deg.]</li>
+  <li><i>Splay dash angle threshold</i>: splay shots making an angle smaller than this threshold are dashed, in x-sections [60 deg.]</li>
+  <li><i>X-section H-threshold</i>: the inclination angle above which a x-section is horizontal. (Below it x-section are vertical).</li>
+    <li>Survey line <i>thickness</i> (midline/splay)</li>
+    <li>Station name <i>text size</i> [18 pt] [N]</li>
+    <li>Size of <i>green dots</i> displayed in <b>edit</b> mode [5 px] [A]</li>
+    <li><i>Selection</i> radius for fine-editing a sketch; [16 px] [A]</li>
+    <li>Radius of <i>pointing</i>: to select you must not move the finger more than this [A]</li>
+    <li><i>Eraser size</i></li>
+    <li><i>Shift sensitivity</i>: maximum stepping when moving a sketch [60 px] [E]. Increase it if sketch shifting is jaggy</li>
+    </ul>
+  </li>
+  <li><i>AUTO WALLS [E]</i> <a href="page_walls.htm">settings</a></li>
+</ul>
+
+<h4>Sketch cache</h4>
+Once opened the sketches are kept in memory, in a cache. This speeds up switching between the shot-list window and the sketch window, as the sketch do not need to be read from file. The sketch cache is cleared when the survey is closed.<br><p>
+
+<h4>Sketch file format</h4>
+Each sketch is saved to file whenever it is modified, or when the sketch window changes to a different view.
+For performance TopoDroid saves the sketches in a binary format.<br><p>
+
+<h4>Point selection [A]</h4>
+To do some editing you must select a point: either a point item, a line/area point, a station, or a shot midpoint.<br>
+To this aim you tap near the point you want. However if there are several points close where you tap, they are all selected, but only one of them is actively being edited. You change the "active" point among the selected set with the <u>Previous</u> and <u>Next</u> buttons.<br><p>
+
+<h4>Line style</h4>
+TopoDroid has four line styles. With the normal style [default] the lines are drawn as polylines. With the fine style the polyline segments are shorter, while with the coarse style they are longer. In the fourth style lines are interpolated replacing the segments with cubic Bezier curves (splines). These segments pass through the two endpoints and have two control points used define the curvature.
+If you export the drawing in DXF with AutoCAD version 6 do not use splines because they get exported as polylines.<br><p>
+
+<h4>Line continuation</h4>
+The <u>Continuation</u> button is a multi-state button.
+<ul>
+<li><i>off</i>: the lines of the current type cannot be joined</li>
+<li><i>no</i>: the current type line will not be joined</li>
+<li><i>start</i>: the current type line will be joined to a line of the same group if its start-point is close to one of that line endpoints</li>
+<li><i>end</i>: the current type line will be joined to a line of the same group by its end-point</li>
+<li><i>both</i>: the current type line will be joined to a line of the same group by both its start and its end-point</li>
+<li><i>continue</i>: the current type line will continue a line of the same group if its start-point is close enough to an endpoint of that line</li>
+</ul>
+
+<h4>Portrait/Landscape presentation</h4>
+In portrait presentation the North and the Vertical are upward in plan and profile view, respectively.
+In landscape presentation they are leftward so that the East is upward in plan view and the Right is upward in profile view.<br>
+In landscape presentation the iconic symbols are rotated so that they appear natural holding the device in portrait mode.<br>
+The sketches are always saved and exported with the North and the vertical upward.<br><p>
+ 
+<b>Warning. If the sketch disappear from the display, switch between plan and profile to force TopoDroid to refresh it.</b><br><p>
+
+
+<a href="page_tools.htm">Drawing tools palette</a><br>
+<a href="page_therion_stations.htm">Therion station points</a><br>
+<a href="page_undo.htm">Undo stack</a><br>
+<a href="page_shift.htm">Sketch shift and flip</a><br>
+<p>
+
+<a href="manual08.htm">&lt; Survey info</a> |
+<a href="manual10.htm">Sketch drawing &gt;</a>
+
+</body></html>

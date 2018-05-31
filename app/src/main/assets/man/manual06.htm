@@ -1,0 +1,124 @@
+<html><body>
+<h3>[6] SURVEY DATA WINDOW</h3>
+
+The survey shot window displays the list of the shots of the survey.<br><p>
+
+TopoDroid distinguishes four kinds of shots (displayed with different colors):
+<ol>
+<li>[red] "blank" shots, i.e, shots with the stations not set yet</li>
+<li>[blue] "splay": it has only one station, usually the "From" station</li>
+<li>[white] "leg" (the first shot of a group of repeated measurements): this shot has both the "From" and the "To" station set</li>
+<li>[grey] "repeated-leg" (the following shots of a group of leg shots): these shots do not need to have the stations set</li>
+</ol><p>
+Background colors:
+<ul>
+<li>blueish (station): last downloaded shots</li>
+<li>reddish (data): <a href="page_accuracy.htm">unreliable</a> shots, i.e. shots with "abnormal" field intensities (only DistoX2)</li>
+<li>orange (data): short leg</li>
+</ul><br>
+<img src="shots_list.png" alt="shots list"/><p>
+
+<h4>ACTIONS</h4>
+<ul style="margin-top:0">
+<li>tap on the shot data opens the shot <a href="page_shot_edit1.htm">edit dialog</a></li>
+<!--li>tap on a shot clino: shot <a href="page_shot_edit2.htm">secondary actions</a></li-->
+<li>tap on a station: show/hide splays at the station</li>
+<li>long tap on a station: select/deselect the <a href="page_current.htm">"active" station</a></li>
+</ul><br><p>
+
+<h4>BUTTONS</h4>
+<ul style="margin-top:0">
+<li>DistoX data <a href="page_download.htm">download</a>. Hidden if no DistoX selected</li>
+<li><a href="page_bluetooth.htm">Bluetooth</a></li>
+<li>Data <a href="page_displaymode.htm">display mode</a></li>
+<li><a href="page_plot_list.htm">Sketch</a> list dialog.</li>
+<li>Survey <a href="page_survey_notes.htm">notes</a></li>
+<li><u>Add</u> <a href="page_man_data.htm">manual</a> shot data dialog</li>
+<li><a href="page_saved_station.htm">saved stations</a></li>
+<li><a href="page_azimuth.htm">extend reference</a></li>
+<li><a href="page_station_search.htm">station search</a></li>
+</ul><br><p>
+
+<b>Long taps</b><br>
+<ul style="margin-top:0">
+<li>"Download": DistoX switch</li>
+<li>"Sketch": immediately open the most recent sketch</li>
+<li>"Manual data": instruments calibration dialog</li>
+<li>"Station search": move to the next shot result</li>
+</ul><br><p>
+
+
+Multi-shot selection buttons:<br>
+<ul style="margin-top:0">
+<li>set shots extend to <u>left</u></li>
+<li>set shots extend to <u>right</u></li>
+<li><u>delete</u> the shots</li>
+<li><u>cancel</u> the multi-shot selection</li>
+</ul><br><p>
+
+<h4>Sketch dialog</h4>
+Through the Sketch dialog you create a new sketch or open an existing one. There is a button to create a new sketch, and a two-column list of the current survey sketches. Items in the left column open a sketch in plan view, those in the right column open it in profile view. You can switch between them from within the sketch window.<br><p>
+<!--
+If the 3D modelling is enabled there is also a button to create a new 3D model, and the existing 3D models are listed after the sketches.<br><p>
+-->
+
+<h4>MENUS</h4>
+<ul style="margin-top:0">
+<li><u>Survey info</u>: survey information window</li>
+<li><u>Recover</u>: deleted item (shot or sketch) <a href="page_undelete.htm">recovery</a></li>
+<li><u>Photo</u>: pictures taken for this survey</li>
+<li><u>Sensor</u>: sensor data taken for this survey</li>
+<li><u>3D</u>: 3D survey display (requires <a page="manual14.htm">Cave3D</a>)</li>
+<li><u>DistoX</u>: switches to the device window</li>
+<li><u>Settings</u></li>
+<li><u>Help</u></li>
+</ul><br><p>
+
+<h4>SURVEY SETTINGS</h4>
+<ul style="margin-top:0">
+  <li><i>Team</i>: the default surveying team. If the value is not empty, it is used to set the "Team" field when you create a new survey. Write your name and that of the cavers you usually survey with. [default unset]</li>
+  <li><i>Stations policy</i>: select the automatic <a href="page_station_policy.htm">station naming policy.</a> [default "splays+foresight"]</li>
+  <li><i>Station names</i> specifies the type of the station names, either alphanumeric or numeric [default "alphanumeric"]</li>
+  <li><i>Initial station name</i>: the default first station name for new surveys. Can be overridden in the <i>New survey</i> dialog. [default unset]</li>
+  <li><i>Thumbnail size</i>: size of the photo thumbnails [default 200, min 80, max 400]</li>
+  <li><i>Data backup</i>: whether to export the survey data whenever the data window is closed [default no]</li>
+  <li><i>Shared x-sections</i>: whether at-station x-section should be shared by default [default no]</li>
+  <li><i>DATA UNITS</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li><i>Length units</i>: either meters or feet [default meters]</li>
+    <li><i>Angle units</i>: either degrees or grads [default degrees]</li>
+    <li><i>Sketch grid-cell unit</i>: either meters, yards, 2-ft, or 0.1 meter [default meters]</li>
+    </ul>
+  </li>
+  <li><i>SHOT DATA</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li><i>Max shot length</i>: longer shots are "overshoots" [default 50 m, min 20 m]</li>
+    <li><i>Min leg length</i>: shorter legs are highlighted with an orange background [default 0.5 m]</li>
+    <li><i>Leg tolerance</i>: the angular tolerance (percent) between consecutive shots of a leg [default 0.05, min 0]</li>
+    <li><i>Min leg shots</i>: minimum number of close consecutive shots for a leg.[default 2, min 2, max 4]</li>
+    <li><i>Splay vertical threshold</i> defines how the <a href="page_azimuth.htm">splay "extend"</a> is set [default 10, min 0, max 90]</li>
+    <li><i>Leg vertical threshold</i> (Therion "vthreshold"): the LRUD for manually entered shots are considered West-East-North-South when the shot inclination exceeds the vertical threshold [default 80, min 0, max 90]</li>
+    <li><i>Shot extend</i>: either fixed or relative to the <a href="page_azimuth.htm">extend reference</a> [default relative]</li>
+    <li><i>Loop closure</i> error compensation. It is advisable not to do the compensation, as this allows to see graphically the misclosures, and spot possible survey errors [default "none"]. The special loop compensation based on "triangles" is for <a href="page_trilateration.htm">trilateration</a> [E].</li>
+    <li>whether to show <i>prev/next</i> buttons in the shot edit dialog [default yes]</li>
+    <li><i>Backsight</i> fields in the shot manual input dialog [N] [default no]</li>
+    <li><i>Magnetic anomaly</i> compensation. It requires backsight auto-station policy [default off]</li>
+    <li><i>Timer</i>: seconds of delay before measuring directions with the Android sensors [default 10, min 0]</li>
+    <li><i>Beep volume</i>: timer beep volume [N] [default 50, min 10, max 100]</li>
+    </ul>
+  </li>  
+  <li><i>LOCATION <a href="page_fixed_list.htm">settings</a></i></li>  
+  <li><i>ACCURACY <a href="page_accuracy.htm">settings</a></i></li>
+</ul><br><p>
+
+To exit the survey data window double tap on the <u>BACK</u> button of your device.<br>
+If the automatic backup is enabled and the default data file format is set, the data are exported whenever the data window is closed.<br><p>
+
+<b>Magnetic anomaly compensation</b><br>
+The magnetic anomaly compensation is done estimating at each station the
+"local" magnetic declination by comparing the azimuths of the leg reaching to the station and the backsight leg. The azimuth of all the shots at the station are then corrected with the "local" declination. An overall declination remains because the declination at the first station cannot be determined. Furthermore the survey azimuth angles become relative as in a traverse, therefore the angle errors add up instead of compensating.<br><p>
+
+<a href="manual05.htm">&lt; Calibration data</a> |
+<a href="manual07.htm">Shot list &gt;</a>
+
+</body></html>

@@ -1,0 +1,30 @@
+<html><body>
+
+<h4>Calibration data groups</h4>
+
+This dialog is opened tapping the <u>Group</u> button of the <i>Calibration data</i> window.<br><p>
+
+Before computing the calibration coefficient the calibration data must be subdivided in groups of data having the same azimuth and inclination (different roll).<br><p>
+
+The groups are identified by an integer number starting with 1.<br>
+A data with number 0 is listed but excluded from the coefficient computation.<br>
+"Deleted" data have group number -1.<br><p> 
+
+You can assign the group number to each calibration data by hand (with the "Calibration data edit" dialog),
+or let TopoDroid assign the group numbers for you.
+There are three automatic grouping policies:
+<ol>
+<li>four data at a time for each group;</li>
+<li>four-at-a-time for the first 16 data (four groups), then each data is a group by itself;</li>
+<li>groups based on the relative angular distance (direction difference).</li>
+</ol>
+<br><p>
+
+Actions:
+<ul>
+<li><b>Reset groups</b>: all the data groups are reset</li> 
+<li><b>OK</b>: groups are assigned (only to data without a group)</li>
+</ul>
+<br><p>
+
+</body></html>
