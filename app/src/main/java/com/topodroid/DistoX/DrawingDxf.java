@@ -971,14 +971,14 @@ class DrawingDxf
               } else {
                 handle = toDxf( pw5, handle, point, scale, xoff, yoff );
               }
-            } else {
-              printString( pw5, 0, "INSERT" );
+            } else {*/
+            printString( pw5, 0, "POINT" );
               printString( pw5, 8, "POINT" );
-              printInt( pw5, 2, idx );
-              printFloat( pw5, 41, POINT_SCALE );
-              printFloat( pw5, 42, POINT_SCALE );
-              printXYZ( pw5, point.cx, -point.cy, 0.0f, 0 );
-            }*/
+              //printInt( pw5, 2, idx );
+              /*printFloat( pw5, 41, POINT_SCALE );
+              printFloat( pw5, 42, POINT_SCALE );*/
+            printXYZ( pw5, xoff * scale, -yoff * scale, 0.0f, 0 );
+          //  }
           }
           out.write( sw5.getBuffer().toString() );
           out.flush();
@@ -1033,13 +1033,15 @@ class DrawingDxf
 
     String block = "P_" + BrushManager.mPointLib.getSymbolThName( point.mPointType ).replace(':','-');
     // int idx = 1 + point.mPointType;
-    printString( pw, 0, "INSERT" );
-    ++handle; printAcDb( pw, handle, "AcDbBlockReference" );
+    printString( pw, 0, "POINT" );
+    printString( pw, 100, "AcDbPoint" );
+
+    ++handle; //printAcDb( pw, handle, "AcDbBlockReference" );
     printString( pw, 8, "POINT" );
-    printString( pw, 2, block );
+    /*printString( pw, 2, block );*//*
     printFloat( pw, 41, POINT_SCALE );
     printFloat( pw, 42, POINT_SCALE );
-    printFloat( pw, 50, 360-(float)(point.mOrientation) );
+    printFloat( pw, 50, 360-(float)(point.mOrientation) );*/
     printXYZ( pw, (point.cx+xoff)*scale, -(point.cy+yoff)*scale, 0, 0 );
     return handle;
   }
