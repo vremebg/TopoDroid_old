@@ -968,13 +968,13 @@ class DrawingDxf
               } else {
                 handle = toDxf( pw5, handle, point, scale, xoff, yoff );
               }
-            } else {*/
+            } else {
             printString( pw5, 0, "POINT" );
               printString( pw5, 8, "POINT" );
               //printInt( pw5, 2, idx );
               /*printFloat( pw5, 41, POINT_SCALE );
-              printFloat( pw5, 42, POINT_SCALE );*/
-            printXYZ( pw5, xoff * scale, -yoff * scale, 0.0f, 0 );
+              printFloat( pw5, 42, POINT_SCALE );
+            printXYZ( pw5, xoff * scale, -yoff * scale, 0.0f, 0 );*/
           //  }
           }
           out.write( sw5.getBuffer().toString() );
