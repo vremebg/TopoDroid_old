@@ -984,7 +984,9 @@ class DrawingDxf
         PrintWriter pw6  = new PrintWriter(sw6);
         if ( TDSetting.mAutoStations ) {
           for ( DrawingStationName name : plot.getStations() ) { // auto-stations
-            handle = toDxf( pw6, handle, name, scale, xoff, yoff );
+            handle = toDxf( pw6, handle, name, scale, xoff+1.0f, yoff-1.0f );
+            handle = printLine( pw6,scale,handle,"STATION",name.cx+xoff, -name.cy+yoff,name.cx+xoff+15.0f, -name.cy+yoff );
+
           }
           out.write( sw6.getBuffer().toString() );
           out.flush();
