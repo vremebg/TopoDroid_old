@@ -648,7 +648,7 @@ class DrawingDxf
           out.write( sw2.getBuffer().toString() );
         }
         writeEndTable( out );
-
+/*
         if ( mVersion13 ) {
           ++handle; writeBeginTable( out, "STYLE", handle, 2 );  // 2 style
           {
@@ -774,11 +774,11 @@ class DrawingDxf
             }
           }
           writeEndTable( out );
-        }
+        }*/
       }
       writeEndSection( out );
       out.flush();
-      
+      /*
       writeSection( out, "BLOCKS" );
       {
         // // 8 layer (0), 2 block name,
@@ -807,7 +807,7 @@ class DrawingDxf
         }
       }
       writeEndSection( out );
-      out.flush();
+      out.flush();*/
 
       writeSection( out, "ENTITIES" );
       {
@@ -953,12 +953,12 @@ class DrawingDxf
           else if ( path.mType == DrawingPath.DRAWING_PATH_AREA )
           {
             handle = toDxf( pw5, handle, (DrawingAreaPath)path, scale, xoff, yoff );
-          } 
+          }
           else if ( path.mType == DrawingPath.DRAWING_PATH_POINT )
           {
             DrawingPointPath point = (DrawingPointPath) path;
             int idx = 1 + point.mPointType;
-            if ( mVersion13 ) {
+            /*if ( mVersion13 ) {
               if ( point.mPointType == BrushManager.mPointLib.mPointSectionIndex ) {
                 // FIOXME GET_OPTION
                 // String scrapfile = point.mOptions.substring( 7 ) + ".tdr";
@@ -978,7 +978,7 @@ class DrawingDxf
               printFloat( pw5, 41, POINT_SCALE );
               printFloat( pw5, 42, POINT_SCALE );
               printXYZ( pw5, point.cx, -point.cy, 0.0f, 0 );
-            }
+            }*/
           }
           out.write( sw5.getBuffer().toString() );
           out.flush();
