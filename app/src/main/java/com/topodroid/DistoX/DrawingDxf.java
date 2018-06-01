@@ -429,7 +429,7 @@ class DrawingDxf
       // printXYZ( pw, 0, 0, 1, 1 ); // second alignmenmt (otional)
       // printXYZ( pw, 0, 0, 1, 200 ); // extrusion (otional 0 0 1)
       // printFloat( pw, 39, 0 );   // thickness (optional 0) 
-      printFloat( pw, 40, scale );   // height 
+      printFloat( pw, 40, scale/20.0f );   // height
       // printFloat( pw, 41, 1 );    // scale X (optional 1)
       printFloat( pw, 50, angle );    // rotation [deg]
       printFloat( pw, 51, 0 );    // oblique angle
@@ -447,7 +447,7 @@ class DrawingDxf
   {
     mVersion13 = (TDSetting.mAcadVersion >= 13);
     
-    float scale = TDSetting.mDxfScale;
+    float scale = 0.05f;//TDSetting.mDxfScale;
     float xoff = 0;
     float yoff = 0;
     int handle = 0;
@@ -811,7 +811,7 @@ class DrawingDxf
 
       writeSection( out, "ENTITIES" );
       {
-        float SCALE_FIX = DrawingUtil.SCALE_FIX;
+        float SCALE_FIX = 1.0f;//DrawingUtil.SCALE_FIX;
 
         // reference
         {
