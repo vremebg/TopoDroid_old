@@ -237,6 +237,18 @@ class DrawingDxf
     return handle;
   }
 
+  static private int printLine(PrintWriter pw, float scale, int handle, String layer, float x, float y, float x2, float y2)
+  {
+    printString( pw, 0, "LINE" );
+    ++handle;
+    printAcDb( pw, handle, AcDbEntity, AcDbLine );
+    printString( pw, 8, layer );
+    // printInt(  pw, 39, 0 );         // line thickness
+    printXYZ(  pw, x*scale, y*scale, 0.0f, 0 );
+    printXYZ( pw, x2*scale, y2*scale, 0.0f, 1 );
+    return handle;
+  }
+
   static private int printPolyline( PrintWriter pw, DrawingPointLinePath line, float scale, int handle,
                                     String layer, boolean closed, float xoff, float yoff )
   {
@@ -812,31 +824,15 @@ class DrawingDxf
       writeSection( out, "ENTITIES" );
       {
         float SCALE_FIX = 1.0f;//DrawingUtil.SCALE_FIX;
-
+        StringWriter sw9 = new StringWriter();
+        PrintWriter pw9  = new PrintWriter(sw9);
         // reference
         {
-          StringWriter sw9 = new StringWriter();
-          PrintWriter pw9  = new PrintWriter(sw9);
-          printString( pw9, 0, "LINE" );
-          ++handle;
-          printAcDb( pw9, handle, AcDbEntity, AcDbLine );
-          printString( pw9, 8, "REF" );
-          // printInt(  pw9, 39, 0 );         // line thickness
-          printXYZ(  pw9, xmin, -ymax, 0.0f, 0 );
-          printXYZ( pw9, (xmin+10*SCALE_FIX), -ymax, 0.0f, 1 );
+          handle = printLine( pw9,1.0f,handle,"REF",xmin,-ymax,xmin+10*SCALE_FIX,-ymax );
+          handle = printLine( pw9,1.0f,handle,"REF",xmin,-ymax,xmin,-ymax+10*SCALE_FIX );
+
           out.write( sw9.getBuffer().toString() );
-        }
-        {
-          StringWriter sw8 = new StringWriter();
-          PrintWriter pw8  = new PrintWriter(sw8);
-          printString( pw8, 0, "LINE" );
-          ++handle;
-          printAcDb( pw8, handle, AcDbEntity, AcDbLine );
-          printString( pw8, 8, "REF" );
-          // printInt(  pw8, 39, 0 );         // line thickness
-          printXYZ(  pw8, xmin, -ymax, 0.0f, 0 );
-          printXYZ( pw8,  xmin, -ymax+10*SCALE_FIX, 0.0f, 1 );
-          out.write( sw8.getBuffer().toString() );
+          out.flush();
         }
         {
           StringWriter sw7 = new StringWriter();
@@ -945,6 +941,7 @@ class DrawingDxf
             DrawingStationPath st = (DrawingStationPath)path;
             handle = printText( pw5, handle, st.name(), (st.cx+xoff) * scale, -(st.cy+yoff) * scale,
                                 0, LABEL_SCALE, "STATION", my_style, xoff, yoff );
+//NOT USED! WHY?
           } 
           else if ( path.mType == DrawingPath.DRAWING_PATH_LINE )
           {
