@@ -955,7 +955,7 @@ class DrawingDxf
           {
             DrawingPointPath point = (DrawingPointPath) path;
             int idx = 1 + point.mPointType;
-            /*if ( mVersion13 ) {
+            /*if ( mVersion13 ) {*/
               if ( point.mPointType == BrushManager.mPointLib.mPointSectionIndex ) {
                 // FIOXME GET_OPTION
                 // String scrapfile = point.mOptions.substring( 7 ) + ".tdr";
@@ -968,7 +968,7 @@ class DrawingDxf
               } else {
                 handle = toDxf( pw5, handle, point, scale, xoff, yoff );
               }
-            } else {
+            /*} else {
             printString( pw5, 0, "POINT" );
               printString( pw5, 8, "POINT" );
               //printInt( pw5, 2, idx );
