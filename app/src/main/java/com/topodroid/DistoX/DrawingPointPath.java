@@ -388,6 +388,18 @@ class DrawingPointPath extends DrawingPath
     }
   }
 
+  public float getScaleValue( )
+  {
+    switch ( mScale ) {
+      case SCALE_XS: return 0.50f;
+      case SCALE_S:  return 0.72f;
+      case SCALE_L:  return 1.41f;
+      case SCALE_XL: return 2.00f;
+
+    }
+    return 1;
+  }
+
   void toTherionOptions( PrintWriter pw )
   {
     if ( mScale != SCALE_M ) {

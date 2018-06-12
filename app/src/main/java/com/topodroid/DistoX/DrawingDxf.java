@@ -1037,10 +1037,10 @@ class DrawingDxf
     printString( pw, 0, "INSERT" );
     ++handle; printAcDb( pw, handle, "AcDbBlockReference" );
     printString( pw, 8, "POINT" );
-    /*printString( pw, 2, block );*//*
-    printFloat( pw, 41, POINT_SCALE );
-    printFloat( pw, 42, POINT_SCALE );
-    printFloat( pw, 50, 360-(float)(point.mOrientation) );*/
+    printString( pw, 2, block );
+    printFloat( pw, 41, point.getScaleValue()*1.4f );
+    printFloat( pw, 42, point.getScaleValue()*1.4f );
+    printFloat( pw, 50, 360-(float)(point.mOrientation) );
     printXYZ( pw, (point.cx+xoff)*scale, -(point.cy+yoff)*scale, 0, 0 );
     return handle;
   }
