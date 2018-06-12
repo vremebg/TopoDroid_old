@@ -1026,7 +1026,7 @@ class DrawingDxf
   { // FIXME point scale factor is 0.3
     if ( point.mPointType == BrushManager.getPointLabelIndex() ) {
       DrawingLabelPath label = (DrawingLabelPath)point;
-      return printText( pw, handle, label.mPointText,  (point.cx+xoff)*scale, -(point.cy+yoff)*scale, (float)label.mOrientation,
+      return printText( pw, handle, label.mPointText,  (point.cx+xoff)*scale, -(point.cy+yoff)*scale, 360.0f-(float)label.mOrientation,
                         LABEL_SCALE, "POINT", my_style, xoff, yoff );
     }
 
@@ -1040,7 +1040,7 @@ class DrawingDxf
     printString( pw, 2, block );
     printFloat( pw, 41, point.getScaleValue()*1.4f );
     printFloat( pw, 42, point.getScaleValue()*1.4f );
-    printFloat( pw, 50, 360-(float)(point.mOrientation) );
+    printFloat( pw, 50, 360.0f-(float)(point.mOrientation) );
     printXYZ( pw, (point.cx+xoff)*scale, -(point.cy+yoff)*scale, 0, 0 );
     return handle;
   }
