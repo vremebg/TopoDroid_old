@@ -790,7 +790,7 @@ class DrawingDxf
       }
       writeEndSection( out );
       out.flush();
-      /*
+
       writeSection( out, "BLOCKS" );
       {
         // // 8 layer (0), 2 block name,
@@ -811,15 +811,15 @@ class DrawingDxf
           // out.write( BrushManager.mPointLib.getPoint(n).getDxf() );
 
           writeString( out, 0, "ENDBLK" );
-          if ( mVersion13 ) {
+         /* if ( mVersion13 ) {*/
             ++handle;
             writeAcDb( out, handle, AcDbEntity, "AcDbBlockEnd");
             writeString( out, 8, "POINT" );
-          }
+          //}
         }
       }
       writeEndSection( out );
-      out.flush();*/
+      out.flush();
 
       writeSection( out, "ENTITIES" );
       {
@@ -1032,10 +1032,10 @@ class DrawingDxf
 
     String block = "P_" + BrushManager.mPointLib.getSymbolThName( point.mPointType ).replace(':','-');
     // int idx = 1 + point.mPointType;
-    printString( pw, 0, "POINT" );
-    printString( pw, 100, "AcDbPoint" );
-
-    ++handle; //printAcDb( pw, handle, "AcDbBlockReference" );
+  //  printString( pw, 0, "POINT" );
+   // printString( pw, 100, "AcDbPoint" );
+    printString( pw, 0, "INSERT" );
+    ++handle; printAcDb( pw, handle, "AcDbBlockReference" );
     printString( pw, 8, "POINT" );
     /*printString( pw, 2, block );*//*
     printFloat( pw, 41, POINT_SCALE );
