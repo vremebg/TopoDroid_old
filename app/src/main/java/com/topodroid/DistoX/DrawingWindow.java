@@ -3258,9 +3258,14 @@ public class DrawingWindow extends ItemDrawer
     // add a therion label point (ILabelAdder)
     public void addLabel( String label, float x, float y )
     {
+      SymbolPointLibrary point_lib = BrushManager.mPointLib;
+
       if ( label != null && label.length() > 0 ) {
 	if ( mLandscape ) { float t=x; x=-y; y=t; }
         DrawingLabelPath label_path = new DrawingLabelPath( label, x, y, mPointScale, null );
+        float angle = (float)( point_lib.getPointOrientation( mCurrentPoint ) ); // degrees
+        label_path.setOrientation(angle);
+
 	label_path.mLandscape = mLandscape;
         mDrawingSurface.addDrawingPath( label_path );
         modified();
